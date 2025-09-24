@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/horus-eye/portfolioweb-juan",
+  "homepage": "https://horus-eye.github.io/portfolioweb-juan/",
 
   "scripts": {
     "dev": "vite",

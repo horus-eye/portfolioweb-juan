@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base:"https://github.com/horus-eye/portfolioweb-juan",
+  base:"https://horus-eye.github.io/portfolioweb-juan/",
   plugins: [
     react(),
     tailwindcss(),
