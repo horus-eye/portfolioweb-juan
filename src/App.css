@@ -1,0 +1,171 @@
+@import "tailwindcss";
+/* Estilos Generales y Tema Xenon Turquoise */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0a0a; /* Negro más profundo para mayor contraste */
+  color: #e6edf3;
+}
+
+:root {
+  --turquoise: #00f6ff;
+  --turquoise-glow: 0 0 4px #00f6ff, 0 0 8px #00f6ff, 0 0 12px #00f6ff; /* Iluminación reducida */
+  --dark-bg: #161b22;
+  --border-color: #30363d;
+}
+
+/* --- Animación para el menú móvil --- */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-down-item {
+  opacity: 0; /* Oculto por defecto */
+  animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
+}
+
+/* Efecto Parallax para el fondo */
+.parallax-bg {
+  background-image: url('/portfolioweb-juan/assets/img/bg.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* --- Header --- */
+.text-glow {
+  color: var(--turquoise);
+  text-shadow: var(--turquoise-glow);
+  animation: flicker 3s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: var(--turquoise-glow);
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+    opacity: 0.9;
+  }
+}
+
+/* --- Navegación --- */
+.nav-link {
+  transition: color 0.3s, text-shadow 0.3s;
+  position: relative;
+  padding-bottom: 5px;
+}
+.nav-link:hover {
+  color: var(--turquoise);
+  text-shadow: 0 0 5px var(--turquoise);
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--turquoise);
+  transition: width 0.3s ease-in-out;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* --- Tarjetas de Proyecto y Habilidades --- */
+.project-card, .skill-card {
+  background-color: var(--dark-bg);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover, .skill-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--turquoise);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 246, 255, 0.2);
+}
+
+/* --- Botones y Enlaces --- */
+.btn-primary {
+  background-color: var(--turquoise);
+  color: #0a0a0a;
+  font-weight: bold;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 0 8px rgba(0, 246, 255, 0.5);
+}
+
+.btn-primary:hover {
+  background-color: #00d1db;
+  box-shadow: var(--turquoise-glow);
+  transform: scale(1.05);
+}
+
+/* --- Formularios --- */
+.form-input {
+  background-color: #1c2128;
+  border: 1px solid var(--border-color);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--turquoise);
+  box-shadow: 0 0 0 3px rgba(0, 246, 255, 0.2);
+}
+
+/* --- Iconos --- */
+.icon-turquoise {
+  color: var(--turquoise);
+}
+
+/* --- Bordes y Separadores --- */
+.section-divider {
+  border-bottom: 2px solid var(--border-color);
+  transition: border-color 0.3s;
+}
+section:hover .section-divider {
+    border-color: var(--turquoise);
+}
+
+/* --- Scrollbar Personalizada --- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--turquoise);
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation-name: slideDown;
+}
