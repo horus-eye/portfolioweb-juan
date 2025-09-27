@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://horus-eye.github.io/portfolioweb-juan/",
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -17,6 +16,8 @@
     "@tailwindcss/vite": "^4.1.13",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "sweetalert2": "^11.23.0",
+    "sweetalert2-react-content": "^5.1.0",
     "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
