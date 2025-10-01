@@ -9,12 +9,12 @@ const projects = [
     github: ""
   },
   {
-    title: "To do APP",
-    description: "Una sencilla pero potente aplicación de lista de tareas para organizar tus tareas diarias.",
-    technologies: "HTML. CSS, JavaScript Y BOOTSTRAP.",
+    title: "Dashban-task",
+    description: "Una sencilla de tareas en tipo tablero kanban que puede tener estado to-do , in progress y done",
+    technologies: "React + vite, React-Boostrap, Css, NodeJs , Expressjs, Postgresql.",
     img: "assets/img/to_do_app.png",
-    link: "https://horus-eye.github.io/to-do-app",
-    github: "https://github.com/horus-eye/to-do-app"
+    link: "https://horus-eye.github.io/dashban-tasks/",
+    github: "https://github.com/horus-eye/dashban-tasks"
   },
   {
     title: "Trivia Game",
